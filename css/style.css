@@ -1,0 +1,359 @@
+/* GENERAL */
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+/* Reset sizing and spacing */
+html, body {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 1.6;
+    font-family: 'Montserrat';
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Font family @body didn't apply to links/buttons - look up why */
+a {    
+    font-family: 'Montserrat';
+}
+
+/* HEADER */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 115px;
+    background: rgba(0, 0, 0, 0.466);
+    color: #fff;
+    text-transform: uppercase;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-weight: 700;    
+}
+
+#nav-logo {
+    display: inline-block;    
+    font-size: 25px;
+    max-width: 40%;
+}
+
+#nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;    
+    font-size: 25px;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+}
+
+#meatballs-menu {
+    display: none;
+}
+
+/* MAIN*/
+main {
+    margin-top: 0px;
+    text-align: center;
+}
+
+#intro {
+    min-height: 100vh;
+    width: 100%;
+    /* Color for fallback + blending */
+    background-color: rgba(0, 0, 0, 0.486);
+    /* Image source: https://unsplash.com/photos/pUAM5hPaCRI */
+    background-image: url(../background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    color: #fff;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+#intro-title {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 80px;  
+    padding-top: 1.5em;
+    padding-bottom: 0.5em;
+}
+
+#intro-info {
+    width: 75%;
+    margin: 0 auto;
+    padding: 15px;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.intro-button,
+.services-card__button {
+    text-transform: uppercase;
+    width: 10em; 
+    height: 3em; 
+    border: 5px solid #fff;
+    background: transparent;
+    outline: none;    
+    font-size: 25px;
+}
+
+#intro-buttons {
+    width: 80%;
+    margin: auto;
+    display: inline-block;
+}
+
+.intro-button {
+    margin: 1em;
+}
+
+.intro-button:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.services-card__button {
+    margin: 1em 0em;
+}
+
+.intro-button a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.intro-button:hover a {
+    color: #000;
+}
+
+#services-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    font-weight: 900;
+    font-size: 60px;
+}
+
+/* At first I used flex for the card layout and changed flex-direction to "column" on small screens,
+re-did it after reading the suggested materials - both worked well enough */
+#services-cards {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 25vh;
+}
+
+.services-card {
+    display: inline-block;
+    max-width: 22em;
+    height: auto;
+    border: 3px solid #000;
+    text-align: center;
+    padding: 40px 30px;
+    margin: 3em;
+}
+
+.services-card__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.services-card__info {
+    margin-bottom: 60px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.services-card__button {
+    border: 5px solid #000;
+    width: 90%;
+}
+
+.services-card__button:hover {
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
+
+.services-card__button a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.services-card__button:hover a {
+    color: #fff;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 10em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    bottom: 0;
+    width: 100%;
+    height: 135px;
+    background: rgba(0, 0, 0, 0.85);;
+}
+
+#social-links {
+    display: flex;
+    list-style: none;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+/* Using IDs to color them individually */
+#instagram {
+    color: #C13584;
+}
+
+#linkedin {
+    color: #2867B2;
+}
+
+#twitter {
+    color: #1DA1F2;
+}
+
+#copyright {
+    color: #fff;
+    display: inline-block;  
+    font-weight: 400;
+    font-size: 25px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 650px) {
+    /* HEADER */
+    #header {        
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    #nav-logo {        
+        font-size: 20px;
+    }
+
+    #meatballs-menu {
+        display: flex;
+    }
+
+    #meatballs-menu div{
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 5px;
+    }
+
+    #nav-links {
+        display: none;
+    }
+
+    /* MAIN */
+    #intro {
+        background-position: center right;
+    }
+
+    #intro-title {
+        font-size: 41px;
+        padding-top: 15vh;
+        padding-bottom: 5vh;
+    }
+
+    #intro-info {
+        font-size: 18px;
+    }
+
+    /* SERVICES */
+    #services-title {
+        font-size: 35px;
+    }
+
+    #services-cards {
+        align-items: center;
+        padding-bottom: 0vh;
+    }
+
+    .services-card {
+        display: inline-block;
+        text-align: center;
+        max-width: 20em;
+    }
+
+    .services-card__title {
+        font-size: 30px; 
+    }
+
+    .services-card__button a {
+        font-size: 16px;
+    }
+
+    /* FOOTER */
+    footer {
+        position: relative;
+        padding-left: 10em;
+        padding-right: 10em;
+        height: 165px;
+    }
+
+    #social-links {
+        position: absolute;
+        width: 12em;        
+        top: 30px;
+        justify-content: center;
+        text-align: center;
+        left: 50%;
+        margin-left: -6em;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .social-link {
+        margin: 0em 1em;
+    }
+
+    #copyright {
+        position: absolute;
+        bottom: 35px;
+        width: 10em;
+        text-align: center;
+        left: 50%;
+        margin-left: -5em;
+    }
+}
